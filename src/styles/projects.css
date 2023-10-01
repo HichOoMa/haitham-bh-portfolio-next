@@ -1,0 +1,16 @@
+.projects{
+  background-color: #fff;
+  background-image: url(/background2.png);
+  background-size: 200px 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 80px 22px 0 22px;
+}
+.projects-list{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: space-around;
+  margin-top: 50px;
+}

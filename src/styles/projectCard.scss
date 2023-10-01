@@ -1,0 +1,111 @@
+.card{
+  height: 87vh;
+  width: 670px;
+  max-width: 670px;
+  max-height: 840px;
+  min-height: 745px;
+  background-color: black;
+  position: relative;
+  padding: 30px;
+  overflow: hidden;
+  box-sizing: border-box;
+  transition: all 0.2s linear;
+  &::before{
+    background: rgba(15,20,30,.9);
+    position: absolute;
+    display: block;
+    width: 130%;
+    height: 100%;
+    top: 0;
+    left: -10%;
+    z-index: 1;
+    opacity: 0;
+    
+    content: '';
+    box-sizing: border-box;
+    transition: opacity .2s linear;
+    box-shadow: 0px -80px 80px 5px rgba(255,255,255,0.81) inset;
+  }
+  &:hover{
+    transform: scale(1.02);
+    &::before{
+      opacity: 1;
+    }
+    & .card-details{
+      display: none;
+    }
+    & .card-hover-action{
+      opacity: 1;
+      left: 0;
+    }
+    & .card-hover-date, .card-hover-title, .card-hover-links{
+      transform: translate3d(0,0,0);
+    }
+  }
+}
+.card-details{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.card-date, .card-hover-date{
+  font-size: 15px;
+  letter-spacing: 10px;
+  color: #e5e5e5;
+  font-weight: 600;
+}
+.card-title, .card-hover-title{
+  font-size: 35px;
+  font-weight: 900;
+  color: #fff;
+  width: 65%;
+}
+.card-hover-action{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  width: 100%;
+  z-index: 2;
+  left: -9999px;
+  opacity: 0;
+  transition: opacity 0.4s linear;
+  overflow: hidden;
+}
+.card-hover-top{
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+.card-hover-details{
+  display: flex;
+  flex-direction: column;
+}
+.card-hover-date{
+  transform: translate3d(0,20px,0);
+  transition: all 0.2s linear;
+}
+.card-hover-title{
+  transform: translate3d(0,20px,0);
+  transition: all 0.2s linear 0.1s;
+}
+.card-hover-links{
+  transform: translate3d(0,20px,0);
+  transition: all 0.2s linear 0.2s;
+  margin-top: 20px;
+  & .item {
+    color: #fff;
+    font-size: 20px;
+    margin-bottom: 10px;
+    transition: color 0.2s linear;
+    &:hover{
+      color: #fca311;
+    }
+  }
+}
+.card-hover-technologies{
+  display: flex;
+  justify-content: space-around;
+}
