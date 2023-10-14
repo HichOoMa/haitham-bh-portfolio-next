@@ -35,8 +35,8 @@ const ProjectCard = (props: Props) =>{
             <span className="card-hover-title">{ props.name }</span>
           </div>
           <span className='card-hover-links'>
-            { props.github && <a href={props.github}><GitHub className='item' /></a> }
-            { props.demo && <a href={props.demo}><Language className='item' /></a> }
+            { props.github && <a href={props.github} target='_blank'><GitHub className='item' /></a> }
+            { props.demo && <a href={props.demo} target='_blank'><Language className='item' /></a> }
           </span>
         </div>
         <div className="card-hover-bottom">

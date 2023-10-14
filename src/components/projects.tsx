@@ -10,6 +10,7 @@ const Projects = () => {
           name='Portfolio UI — personel curriculum vitae'
           backgroundImg='./portfolioMockup.jpg'
           date='2023'
+          github='https://github.com/HaithamBH/haitham-bh-portfolio-react-ts'
           tech={['react', 'vite', 'css']}
         />
       </div>
