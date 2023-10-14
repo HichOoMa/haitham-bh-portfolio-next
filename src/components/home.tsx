@@ -7,7 +7,7 @@ export default function Home(){
         <div className="greeting">
           <span>HEY, I'M HAITHAM BENHAMMOUDA</span>
           <p>A Full Stack Web developer focused on building simple and complexed web applications on demand</p>
-          <input type="button" value="PROJECTS" />
+          <input type="button" value="PROJECTS" onClick={()=>location.href="#projects"}/>
         </div>
         <div className="socialMedia">
           <a href="https://www.linkedin.com/in/haitham-bh/">
